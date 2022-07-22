@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import './answer.dart';
 import './question.dart';
 
 class Quiz extends StatelessWidget {
@@ -17,16 +16,27 @@ class Quiz extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var data = questions[questionIndex]['answers'] as List<Map<String, Object>>;
     return Column(
       children: [
         Question(
           questions[questionIndex]['questionText'].toString(),
         ), //Question
-        ...(questions[questionIndex]['answers'] as List<Map<String, Object>>)
-            .map((answer) {
-          return Answer(
-                  () => answerQuestion(answer['score']), answer['text'].toString());
-        }).toList()
+        ListView.builder(
+          itemCount: data.length,
+          primary: false,
+          shrinkWrap: true,
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+              onTap: () {
+                var action = data[index]['score'].toString();
+                print(action);
+              },
+              leading: CircleAvatar(child: Text('${index + 1}')),
+              title: Text(data[index]['text'].toString()),
+            );
+          },
+        )
       ],
     ); //Column
   }
