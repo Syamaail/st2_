@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.st2">
+    package="com.example.st2"><uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="st2"
         android:name="${applicationName}"

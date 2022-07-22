@@ -20,6 +20,9 @@ class _MyAppState extends State<MyApp> {
   final _questions = const [
     {
       'questionText': 'Q1. Who created Flutter?',
+      'questionVideo':
+          'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+      'mediaType': 'video',
       'questionPic':
           'http://3.bp.blogspot.com/-lYcJAR0LOXQ/Tc4cSev2WQI/AAAAAAAALuE/zCaDcQg3VYE/s1600/Syamail_Muhammadiah.jpg',
       'answers': [
@@ -31,6 +34,7 @@ class _MyAppState extends State<MyApp> {
     },
     {
       'questionText': 'Q2. What is Flutter?',
+      'mediaType': 'picture',
       'questionPic':
           'https://galeriaddeen.com/wp-content/uploads/2021/05/kesempurnaan-muhammad-rasulullah-imam-attirmizi-by-galeri-addeen.png',
       'answers': [
@@ -46,6 +50,9 @@ class _MyAppState extends State<MyApp> {
     },
     {
       'questionText': ' Q3. Which programing language is used by Flutter',
+      'mediaType': 'picture',
+      'questionPic':
+          'https://galeriaddeen.com/wp-content/uploads/2021/05/kesempurnaan-muhammad-rasulullah-imam-attirmizi-by-galeri-addeen.png',
       'answers': [
         {'text': 'Ruby', 'score': -2},
         {'text': 'Dart', 'score': 10},
@@ -55,6 +62,9 @@ class _MyAppState extends State<MyApp> {
     },
     {
       'questionText': 'Q4. Who created Dart programing language?',
+      'mediaType': 'picture',
+      'questionPic':
+          'https://galeriaddeen.com/wp-content/uploads/2021/05/kesempurnaan-muhammad-rasulullah-imam-attirmizi-by-galeri-addeen.png',
       'answers': [
         {'text': 'Lars Bak and Kasper Lund', 'score': 10},
         {'text': 'Brendan Eich', 'score': -2},
@@ -65,6 +75,9 @@ class _MyAppState extends State<MyApp> {
     {
       'questionText':
           'Q5. Is Flutter for Web and Desktop available in stable version?',
+      'mediaType': 'picture',
+      'questionPic':
+          'https://galeriaddeen.com/wp-content/uploads/2021/05/kesempurnaan-muhammad-rasulullah-imam-attirmizi-by-galeri-addeen.png',
       'answers': [
         {
           'text': 'Yes',

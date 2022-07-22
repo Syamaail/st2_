@@ -1,8 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import './question.dart';
-
 class Quiz extends StatefulWidget {
   final List<Map<String, Object>> questions;
   final int questionIndex;
@@ -105,16 +103,13 @@ class _QuizState extends State<Quiz> {
           : Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(32.0),
+                  padding: const EdgeInsets.all(32.0),
                   child: CircleAvatar(
                     radius: 80,
                     backgroundImage: NetworkImage(
                         widget.questions[id]['questionPic'].toString()),
                   ),
                 ),
-                Question(
-                  widget.questions[id]['questionText'].toString(),
-                ), //Question
                 ListView.builder(
                   itemCount: list.length,
                   primary: false,
