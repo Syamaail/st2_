@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import './quiz.dart';
-import './result.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -103,21 +102,12 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Test'),
-          backgroundColor: const Color(0xFF00E676),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: _questionIndex < _questions.length
-              ? Quiz(
-                  answerQuestion: _answerQuestion,
-                  questionIndex: _questionIndex,
-                  questions: _questions,
-                ) //Quiz
-              : Result(_totalScore, _resetQuiz),
-        ), //Padding
-      ), //Scaffold
+          body: Quiz(
+        answerQuestion: _answerQuestion,
+        questionIndex: _questionIndex,
+        questions: _questions,
+      ) // //Padding
+          ), //Scaffold
       debugShowCheckedModeBanner: false,
     ); //MaterialApp
   }
