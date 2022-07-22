@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import './question.dart';
@@ -40,17 +41,23 @@ class _QuizState extends State<Quiz> {
     String resultText;
     if (_totalScore >= 41) {
       resultText = 'You are awesome!';
-      print(_totalScore);
+      if (kDebugMode) {
+        print(_totalScore);
+      }
     } else if (_totalScore >= 31) {
       resultText = 'Pretty likeable!';
-      print(_totalScore);
+      if (kDebugMode) {
+        print(_totalScore);
+      }
     } else if (_totalScore >= 21) {
       resultText = 'You need to work more!';
     } else if (_totalScore >= 1) {
       resultText = 'You need to work hard!';
     } else {
       resultText = 'This is a poor score!';
-      print(_totalScore);
+      if (kDebugMode) {
+        print(_totalScore);
+      }
     }
     return resultText;
   }
@@ -62,12 +69,13 @@ class _QuizState extends State<Quiz> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Score ' '${_totalScore}',
+          'Score $_totalScore',
           textAlign: TextAlign.center,
         ),
         backgroundColor: const Color(0xFF00E676),
       ),
       body: id == widget.questions.length - 1
+          //result page
           ? Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -93,8 +101,17 @@ class _QuizState extends State<Quiz> {
                 ], //<Widget>[]
               ),
             )
+          //question page
           : Column(
               children: [
+                Padding(
+                  padding: EdgeInsets.all(32.0),
+                  child: CircleAvatar(
+                    radius: 80,
+                    backgroundImage: NetworkImage(
+                        widget.questions[id]['questionPic'].toString()),
+                  ),
+                ),
                 Question(
                   widget.questions[id]['questionText'].toString(),
                 ), //Question

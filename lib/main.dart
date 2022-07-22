@@ -20,6 +20,8 @@ class _MyAppState extends State<MyApp> {
   final _questions = const [
     {
       'questionText': 'Q1. Who created Flutter?',
+      'questionPic':
+          'http://3.bp.blogspot.com/-lYcJAR0LOXQ/Tc4cSev2WQI/AAAAAAAALuE/zCaDcQg3VYE/s1600/Syamail_Muhammadiah.jpg',
       'answers': [
         {'text': 'Facebook', 'score': -2},
         {'text': 'Adobe', 'score': -2},
@@ -29,6 +31,8 @@ class _MyAppState extends State<MyApp> {
     },
     {
       'questionText': 'Q2. What is Flutter?',
+      'questionPic':
+          'https://galeriaddeen.com/wp-content/uploads/2021/05/kesempurnaan-muhammad-rasulullah-imam-attirmizi-by-galeri-addeen.png',
       'answers': [
         {'text': 'Android Development Kit', 'score': -2},
         {'text': 'IOS Development Kit', 'score': -2},

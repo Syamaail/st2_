@@ -16,20 +16,10 @@ class Answer extends StatelessWidget {
         onPressed: selectHandler(),
         style: ButtonStyle(
             textStyle:
-            MaterialStateProperty.all(const TextStyle(color: Colors.white)),
+                MaterialStateProperty.all(const TextStyle(color: Colors.white)),
             backgroundColor: MaterialStateProperty.all(Colors.green)),
         child: Text(answerText),
       ),
-
-      // RaisedButton is deprecated and should not be used
-      // Use ElevatedButton instead
-
-      // child: RaisedButton(
-      // color: const Color(0xFF00E676),
-      // textColor: Colors.white,
-      // onPressed: selectHandler(),
-      // child: Text(answerText),
-      // ), //RaisedButton
     ); //Container
   }
 }
